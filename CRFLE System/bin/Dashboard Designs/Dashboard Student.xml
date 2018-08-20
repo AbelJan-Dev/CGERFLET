@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-PH">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>Upcoming Exam</Name>
+      <Connection Name="HPASAABELJAN_dbCRFLE_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="HPASAABELJAN" />
+          <Parameter Name="database" Value="dbCRFLE" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="rootadmin" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="vwExaminations">
+        <Tables>
+          <Table Name="vwExaminations" Meta="0|0|125|180" />
+        </Tables>
+        <Columns>
+          <Column Table="vwExaminations" Name="Date" />
+          <Column Table="vwExaminations" Name="StartTime" />
+          <Column Table="vwExaminations" Name="Duration" />
+          <Column Table="vwExaminations" Name="EndTime" />
+          <Column Table="vwExaminations" Name="Status" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="Upcoming Exam">
+          <View Name="vwExaminations">
+            <Field Name="Date" Type="DateTime" />
+            <Field Name="StartTime" Type="Unknown" />
+            <Field Name="Duration" Type="String" />
+            <Field Name="EndTime" Type="Unknown" />
+            <Field Name="Status" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Upcoming" Group="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="vwExaminations">
+      <DataItems>
+        <Dimension DataMember="Duration" UniqueName="DataItem2" />
+        <Dimension DataMember="Status" UniqueName="DataItem4" />
+        <Dimension DataMember="Date" DateTimeGroupInterval="None" UniqueName="DataItem0" />
+        <Dimension DataMember="StartTime" UniqueName="DataItem1" />
+        <Dimension DataMember="EndTime" UniqueName="DataItem3" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" ApplyToRow="true" DataItem="DataItem0">
+          <FormatConditionRangeGradient ValueType="Number">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/07/2017 00:00:00.000" />
+                  <AppearanceSettings AppearanceType="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/08/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/09/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/10/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/11/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/12/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/13/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/14/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/15/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/16/2017 00:00:00.000" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" ApplyToRow="true" DataItem="DataItem0">
+          <FormatConditionRangeGradient ValueType="Number">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/07/2017 00:00:00.000" />
+                  <AppearanceSettings AppearanceType="GradientGreen" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/08/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/09/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/10/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/11/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/12/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/13/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/14/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/15/2017 00:00:00.000" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.DateTime" Value="10/16/2017 00:00:00.000" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem4" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem2" Name="History" Group="dashboardItemGroup1">
+      <GridOptions />
+    </Grid>
+  </Items>
+  <Groups>
+    <Group ComponentName="dashboardItemGroup1" Name="Examinations" />
+    <Group ComponentName="dashboardItemGroup3" Name="Group 3" />
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup DashboardItem="dashboardItemGroup3" Weight="53.048128342245988" />
+      <LayoutGroup Orientation="Vertical" DashboardItem="dashboardItemGroup1" Weight="46.951871657754012">
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="31.524008350730689" />
+        <LayoutItem DashboardItem="gridDashboardItem2" Weight="68.475991649269318" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-PH">
+  <Title Visible="false" Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>Questions</Name>
+      <Connection Name="HPASAABELJAN_dbCRFLE_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="HPASAABELJAN" />
+          <Parameter Name="database" Value="dbCRFLE" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="rootadmin" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="tblItems">
+        <Tables>
+          <Table Name="tblItems" Meta="0|0|125|140" />
+          <Table Name="tblCategory" Meta="0|0|125|80" />
+          <Relation Type="Inner" Parent="tblItems" Nested="tblCategory">
+            <KeyColumn Parent="CategoryID" Nested="ID" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <AllColumns Table="tblItems" />
+          <AllColumns Table="tblCategory" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="Questions">
+          <View Name="tblItems">
+            <Field Name="ID" Type="Int32" />
+            <Field Name="Question" Type="String" />
+            <Field Name="Explanation" Type="String" />
+            <Field Name="CategoryID" Type="Int32" />
+            <Field Name="Difficulty" Type="String" />
+            <Field Name="tblCategory_ID" Type="Int32" />
+            <Field Name="Category" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+    <SqlDataSource ComponentName="dashboardSqlDataSource2">
+      <Name>Questionnaire Usage</Name>
+      <Connection Name="HPASAABELJAN_dbCRFLE_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="HPASAABELJAN" />
+          <Parameter Name="database" Value="dbCRFLE" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="rootadmin" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="tblQuestionnaires">
+        <Tables>
+          <Table Name="tblQuestionnaires" Meta="0|0|125|180" />
+        </Tables>
+        <Columns>
+          <Column Table="tblQuestionnaires" Name="Title" />
+          <Column Table="tblQuestionnaires" Name="TimesUsed" />
+        </Columns>
+        <Sorting>
+          <Column Table="tblQuestionnaires" Name="Title" />
+        </Sorting>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="Questionnaire Usage">
+          <View Name="tblQuestionnaires">
+            <Field Name="Title" Type="String" />
+            <Field Name="TimesUsed" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+    <SqlDataSource ComponentName="dashboardSqlDataSource3">
+      <Name>Question Difficulty</Name>
+      <Connection Name="HPASAABELJAN_dbCRFLE_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="HPASAABELJAN" />
+          <Parameter Name="database" Value="dbCRFLE" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="rootadmin" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="vwWrongAnswerCount">
+        <Tables>
+          <Table Name="vwWrongAnswerCount" Meta="0|0|125|80" />
+        </Tables>
+        <Columns>
+          <Column Table="vwWrongAnswerCount" Name="Question" />
+          <Column Table="vwWrongAnswerCount" Name="Count" />
+        </Columns>
+        <Sorting>
+          <Column Table="vwWrongAnswerCount" Name="Count" Descending="true" />
+        </Sorting>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="Question Difficulty">
+          <View Name="vwWrongAnswerCount">
+            <Field Name="Question" Type="String" />
+            <Field Name="Count" Type="Int32" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+    <SqlDataSource ComponentName="dashboardSqlDataSource4">
+      <Name>Best Students</Name>
+      <Connection Name="HPASAABELJAN_dbCRFLE_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="HPASAABELJAN" />
+          <Parameter Name="database" Value="dbCRFLE" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="rootadmin" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="vwStudentPercentagePerExam">
+        <Tables>
+          <Table Name="vwStudentPercentagePerExam" Meta="0|0|125|120" />
+        </Tables>
+        <Columns>
+          <Column Table="vwStudentPercentagePerExam" Name="ID" />
+          <Column Table="vwStudentPercentagePerExam" Name="Student" />
+          <Column Table="vwStudentPercentagePerExam" Name="No. of Exams" />
+          <Column Table="vwStudentPercentagePerExam" Name="Average" />
+        </Columns>
+        <Sorting>
+          <Column Table="vwStudentPercentagePerExam" Name="Average" Descending="true" />
+        </Sorting>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="Best Students">
+          <View Name="vwStudentPercentagePerExam">
+            <Field Name="ID" Type="String" />
+            <Field Name="Student" Type="String" />
+            <Field Name="No. of Exams" Type="Int32" />
+            <Field Name="Average" Type="Decimal" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+    <SqlDataSource ComponentName="dashboardSqlDataSource5">
+      <Name>Student Performance</Name>
+      <Connection Name="HPASAABELJAN_dbCRFLE_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="HPASAABELJAN" />
+          <Parameter Name="database" Value="dbCRFLE" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="rootadmin" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="tblClassRecord">
+        <Tables>
+          <Table Name="tblClassRecord" Meta="0|0|125|160" />
+          <Table Name="tblUsers" Meta="0|0|125|280" />
+          <Table Name="vwStudentPercentagePerExam" Meta="0|0|125|120" />
+          <Relation Type="Inner" Parent="tblClassRecord" Nested="tblUsers">
+            <KeyColumn Parent="UserID" Nested="ID" />
+          </Relation>
+          <Relation Type="Inner" Parent="tblClassRecord" Nested="vwStudentPercentagePerExam">
+            <KeyColumn Parent="UserID" Nested="ID" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="vwStudentPercentagePerExam" Name="ID" />
+          <Column Table="vwStudentPercentagePerExam" Name="Student" />
+          <Column Table="tblClassRecord" Name="SessionID" />
+          <Column Table="vwStudentPercentagePerExam" Name="Average" />
+        </Columns>
+        <Filter>[tblUsers.Verified] = '1'</Filter>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="Student Performance">
+          <View Name="tblClassRecord">
+            <Field Name="ID" Type="String" />
+            <Field Name="Student" Type="String" />
+            <Field Name="SessionID" Type="Int32" />
+            <Field Name="Average" Type="Decimal" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="" ShowCaption="false" Group="dashboardItemGroup4" DataSource="dashboardSqlDataSource1" DataMember="tblItems" LabelContentType="ArgumentAndValue" TooltipContentType="Percent">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Category" UniqueName="DataItem0" />
+        <Measure DataMember="Question" Name="Category" SummaryType="Count" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <Pie ComponentName="pieDashboardItem2" Name="Difficulty" ShowCaption="false" Group="dashboardItemGroup4" DataSource="dashboardSqlDataSource1" DataMember="tblItems" LabelContentType="ArgumentAndValue" TooltipContentType="Percent">
+      <DataItems>
+        <Measure DataMember="Question" Name="Difficulty" SummaryType="Count" UniqueName="DataItem0" />
+        <Dimension DataMember="Difficulty" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+    <Grid ComponentName="gridDashboardItem1" Name="Questionnaire Usage" Group="dashboardItemGroup1" DataSource="dashboardSqlDataSource2" DataMember="tblQuestionnaires">
+      <DataItems>
+        <Dimension DataMember="Title" Name="Questionnaire" TopNEnabled="true" TopNCount="10" TopNMeasure="DataItem1" UniqueName="DataItem0" />
+        <Measure DataMember="TimesUsed" Name="Times Used" UniqueName="DataItem1" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" ApplyToRow="true" DataItem="DataItem1">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" DataItem="DataItem1">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" ApplyToRow="true" DataItem="DataItem1">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientBlue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Weight="100">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Weight="50" WidthType="FitToContent">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Grid ComponentName="gridDashboardItem2" Name="Top 10 Difficult Questions" Group="dashboardItemGroup1" DataSource="dashboardSqlDataSource3" DataMember="vwWrongAnswerCount">
+      <DataItems>
+        <Dimension DataMember="Question" UniqueName="DataItem1" />
+        <Measure DataMember="Count" Name="Count" UniqueName="DataItem0" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" Enabled="false">
+          <FormatConditionTopBottom RankType="Number" Rank="10">
+            <AppearanceSettings AppearanceType="PaleRed" />
+          </FormatConditionTopBottom>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" Enabled="false" ApplyToRow="true">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientTransparent" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" Enabled="false">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientBlue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 4" Enabled="false" ApplyToRow="true">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientBlue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 5" ApplyToRow="true" DataItem="DataItem0">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientBlue" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension UniqueName="DataItem1" />
+        </GridDimensionColumn>
+        <GridMeasureColumn WidthType="FitToContent">
+          <Measure UniqueName="DataItem0" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+    <Chart ComponentName="chartDashboardItem1" Name="Performance" Group="dashboardItemGroup2" DataSource="dashboardSqlDataSource5" DataMember="tblClassRecord">
+      <DataItems>
+        <Dimension DataMember="SessionID" UniqueName="DataItem3" />
+        <Measure DataMember="Average" UniqueName="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem3" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple ShowPointMarkers="true" SeriesType="Line">
+              <Value UniqueName="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Grid ComponentName="gridDashboardItem3" Name="Top 10 Best Students" Group="dashboardItemGroup2" DataSource="dashboardSqlDataSource4" DataMember="vwStudentPercentagePerExam" IsMasterFilterCrossDataSource="true">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Student" UniqueName="DataItem0" />
+        <Measure DataMember="No. of Exams" Name="No. of Exams" UniqueName="DataItem1">
+          <NumericFormat FormatType="Number" />
+        </Measure>
+        <Measure DataMember="Average" Name="Average" UniqueName="DataItem2">
+          <NumericFormat FormatType="Percent" />
+        </Measure>
+        <Dimension DataMember="ID" UniqueName="DataItem3" />
+      </DataItems>
+      <FormatRules>
+        <GridItemFormatRule Name="FormatRule 1" Enabled="false" ApplyToRow="true">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientRed" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientGreen" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 2" Enabled="false" ApplyToRow="true">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientYellow" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientGreen" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 3" Enabled="false" ApplyToRow="true">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientYellow" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientGreen" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="FormatRule 4" ApplyToRow="true" DataItem="DataItem2">
+          <FormatConditionRangeGradient ValueType="Percent">
+            <RangeSet>
+              <Ranges>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="0" />
+                  <AppearanceSettings AppearanceType="GradientYellow" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="10" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="20" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="30" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="40" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="50" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="60" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="70" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="80" />
+                </RangeInfo>
+                <RangeInfo>
+                  <Value Type="System.Double" Value="90" />
+                  <AppearanceSettings AppearanceType="GradientGreen" />
+                </RangeInfo>
+              </Ranges>
+            </RangeSet>
+          </FormatConditionRangeGradient>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Weight="43.248175182481752" FixedWidth="13.322493577857804">
+          <Dimension UniqueName="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Weight="106.75182481751826">
+          <Dimension UniqueName="DataItem0" />
+        </GridDimensionColumn>
+        <GridMeasureColumn FixedWidth="30.808266398796171" WidthType="FitToContent">
+          <Measure UniqueName="DataItem1" />
+        </GridMeasureColumn>
+        <GridMeasureColumn WidthType="FitToContent">
+          <Measure UniqueName="DataItem2" />
+        </GridMeasureColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="Manual" />
+    </Grid>
+  </Items>
+  <Groups>
+    <Group ComponentName="dashboardItemGroup2" Name="Students" />
+    <Group ComponentName="dashboardItemGroup4" Name="Questions" />
+    <Group ComponentName="dashboardItemGroup1" Name="Group 2" ShowCaption="false" />
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical" Weight="49.947753396029256">
+        <LayoutGroup DashboardItem="dashboardItemGroup4" Weight="50.088183421516753">
+          <LayoutItem DashboardItem="pieDashboardItem1" Weight="50" />
+          <LayoutItem DashboardItem="pieDashboardItem2" Weight="50" />
+        </LayoutGroup>
+        <LayoutGroup DashboardItem="dashboardItemGroup1" Weight="49.911816578483247">
+          <LayoutItem DashboardItem="gridDashboardItem1" Weight="50" />
+          <LayoutItem DashboardItem="gridDashboardItem2" Weight="50" />
+        </LayoutGroup>
+      </LayoutGroup>
+      <LayoutGroup Orientation="Vertical" DashboardItem="dashboardItemGroup2" Weight="50.052246603970744">
+        <LayoutItem DashboardItem="gridDashboardItem3" Weight="38.728323699421964" />
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="61.271676300578036" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

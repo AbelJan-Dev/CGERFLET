@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-PH">
+  <Title Text="Dashboard" />
+  <DataSources>
+    <SqlDataSource ComponentName="dashboardSqlDataSource1">
+      <Name>SQL Data Source 1</Name>
+      <Connection Name="localhost_dbCRFLE_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="localhost" />
+          <Parameter Name="database" Value="dbCRFLE" />
+          <Parameter Name="useIntegratedSecurity" Value="False" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="sa" />
+          <Parameter Name="password" Value="rootadmin" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="tblItems">
+        <Tables>
+          <Table Name="tblItems" Meta="0|0|125|140" />
+          <Table Name="tblCategory" Meta="0|0|125|80" />
+          <Relation Type="Inner" Parent="tblItems" Nested="tblCategory">
+            <KeyColumn Parent="CategoryID" Nested="ID" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <AllColumns Table="tblItems" />
+          <AllColumns Table="tblCategory" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="tblItems">
+            <Field Name="ID" Type="Int32" />
+            <Field Name="Question" Type="String" />
+            <Field Name="Explanation" Type="String" />
+            <Field Name="CategoryID" Type="Int32" />
+            <Field Name="Difficulty" Type="String" />
+            <Field Name="tblCategory_ID" Type="Int32" />
+            <Field Name="Category" Type="String" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Category" Group="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="tblItems">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="Category" UniqueName="DataItem0" />
+        <Measure DataMember="Question" Name="Items Category Ratio" SummaryType="Count" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pie>
+    <Pie ComponentName="pieDashboardItem2" Name="Difficulty" Group="dashboardItemGroup1" DataSource="dashboardSqlDataSource1" DataMember="tblItems">
+      <DataItems>
+        <Measure DataMember="Question" Name="Items Difficulty Ratio" SummaryType="Count" UniqueName="DataItem0" />
+        <Dimension DataMember="Difficulty" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+  </Items>
+  <Groups>
+    <Group ComponentName="dashboardItemGroup1" Name="Items" />
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup DashboardItem="dashboardItemGroup1" Weight="100">
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="50" />
+        <LayoutItem DashboardItem="pieDashboardItem2" Weight="50" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
