@@ -1,0 +1,17 @@
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\bin\Debug\CRFLE System.exe
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\bin\Debug\CRFLE System.pdb
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE_System.Properties.Resources.resources
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE System.csproj.GenerateResource.Cache
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE System.exe
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE System.pdb
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE System.exe.licenses
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE_System.frmLogin.resources
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE_System.frmMain.resources
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\bin\Debug\MaterialSkin.dll
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\bin\Debug\MetroFramework.dll
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE_System.frmAddUser.resources
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\bin\Debug\CRFLE System.exe.config
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE_System.ucQuestionBank.resources
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE_System.ucAddQuestion.resources
+C:\Users\Abel Jan Asa\Documents\Visual Studio 2012\Projects\CRFLE System\CRFLE System\obj\Debug\CRFLE_System.frmAddItem.resources
