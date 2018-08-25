@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23AA94F9-A624-4945-B87F-B42E8F5FD4D4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRFLE_System</RootNamespace>
+    <AssemblyName>CRFLE System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>CRFLE_System.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_oRp_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.1" />
+    <Reference Include="DevExpress.Charts.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.1" />
+    <Reference Include="DevExpress.DataAccess.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.1.Drawing, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core" />
+    <Reference Include="DevExpress.Utils.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.UI, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.1.Wizard, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Presets, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v16.1.Win, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.1.Extensions, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MaterialSkin">
+      <HintPath>F:\Software Development\MaterialSkin-master\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DashboardDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardDesigner.Designer.cs">
+      <DependentUpon>DashboardDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbCRFLEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbCRFLEDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbCRFLEDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbCRFLEDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbModule.cs" />
+    <Compile Include="dsAccountInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAccountInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsClassRecordData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsClassRecordData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsClassRecordStudents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsClassRecordStudents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsDatabases.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDatabases.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsExam.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExam.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsExamination.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExamination.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsExtName.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExtName.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsItems.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsQuestionBank.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsQuestionBank.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsQuestionnaireItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsQuestionnaireItems.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsQuestionnaires.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsQuestionnaires.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsServers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsServers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAboutExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutExam.Designer.cs">
+      <DependentUpon>frmAboutExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAboutQtnr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAboutQtnr.Designer.cs">
+      <DependentUpon>frmAboutQtnr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccounts.Designer.cs">
+      <DependentUpon>frmAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddUser.Designer.cs">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddItem.Designer.cs">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangePasswordStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePasswordStudent.Designer.cs">
+      <DependentUpon>frmChangePasswordStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassRecord.Designer.cs">
+      <DependentUpon>frmClassRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateQuestionnaire.Designer.cs">
+      <DependentUpon>frmCreateQuestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatabase.Designer.cs">
+      <DependentUpon>frmDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabaseConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatabaseConfiguration.Designer.cs">
+      <DependentUpon>frmDatabaseConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatabaseDialog.Designer.cs">
+      <DependentUpon>frmDatabaseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamination.Designer.cs">
+      <DependentUpon>frmExamination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamSchedule.Designer.cs">
+      <DependentUpon>frmExamSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionBank.Designer.cs">
+      <DependentUpon>frmQuestionBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuestionnaire.Designer.cs">
+      <DependentUpon>frmQuestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExamTimer.Designer.cs">
+      <DependentUpon>frmExamTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowAnswers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowAnswers.Designer.cs">
+      <DependentUpon>frmShowAnswers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowExamResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowExamResult.Designer.cs">
+      <DependentUpon>frmShowExamResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentAccount.Designer.cs">
+      <DependentUpon>frmStudentAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentExam.Designer.cs">
+      <DependentUpon>frmStudentExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTeacherMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherMain.Designer.cs">
+      <DependentUpon>frmTeacherMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentMain.Designer.cs">
+      <DependentUpon>frmStudentMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUnansweredDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUnansweredDialog.Designer.cs">
+      <DependentUpon>frmUnansweredDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateItem.Designer.cs">
+      <DependentUpon>frmUpdateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDialog.Designer.cs">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Questionnaire.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Questionnaire.Designer.cs">
+      <DependentUpon>Questionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpecifyConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecifyConnection.Designer.cs">
+      <DependentUpon>SpecifyConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucQuestionnaireItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucQuestionnaireItem.Designer.cs">
+      <DependentUpon>ucQuestionnaireItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DashboardDesigner.resx">
+      <DependentUpon>DashboardDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAboutExam.resx">
+      <DependentUpon>frmAboutExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAboutQtnr.resx">
+      <DependentUpon>frmAboutQtnr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccounts.resx">
+      <DependentUpon>frmAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddUser.resx">
+      <DependentUpon>frmAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddItem.resx">
+      <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangePasswordStudent.resx">
+      <DependentUpon>frmChangePasswordStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassRecord.resx">
+      <DependentUpon>frmClassRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateQuestionnaire.resx">
+      <DependentUpon>frmCreateQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatabase.resx">
+      <DependentUpon>frmDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatabaseConfiguration.resx">
+      <DependentUpon>frmDatabaseConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatabaseDialog.resx">
+      <DependentUpon>frmDatabaseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamination.resx">
+      <DependentUpon>frmExamination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamSchedule.resx">
+      <DependentUpon>frmExamSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionBank.resx">
+      <DependentUpon>frmQuestionBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuestionnaire.resx">
+      <DependentUpon>frmQuestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExamTimer.resx">
+      <DependentUpon>frmExamTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowAnswers.resx">
+      <DependentUpon>frmShowAnswers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowExamResult.resx">
+      <DependentUpon>frmShowExamResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentAccount.resx">
+      <DependentUpon>frmStudentAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentExam.resx">
+      <DependentUpon>frmStudentExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherMain.resx">
+      <DependentUpon>frmTeacherMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentMain.resx">
+      <DependentUpon>frmStudentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUnansweredDialog.resx">
+      <DependentUpon>frmUnansweredDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateItem.resx">
+      <DependentUpon>frmUpdateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDialog.resx">
+      <DependentUpon>frmDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Questionnaire.resx">
+      <DependentUpon>Questionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecifyConnection.resx">
+      <DependentUpon>SpecifyConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucQuestionnaireItem.resx">
+      <DependentUpon>ucQuestionnaireItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRFLEDataSet.xsc">
+      <DependentUpon>dbCRFLEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRFLEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbCRFLEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRFLEDataSet.xss">
+      <DependentUpon>dbCRFLEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRFLEDataSet1.xsc">
+      <DependentUpon>dbCRFLEDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRFLEDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbCRFLEDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRFLEDataSet1.xss">
+      <DependentUpon>dbCRFLEDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dsAccountInfo.xsc">
+      <DependentUpon>dsAccountInfo.xsd</DependentUpon>
+    </None>
+    <None Include="dsAccountInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAccountInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsAccountInfo.xss">
+      <DependentUpon>dsAccountInfo.xsd</DependentUpon>
+    </None>
+    <None Include="dsCategory.xsc">
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </None>
+    <None Include="dsCategory.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCategory.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsCategory.xss">
+      <DependentUpon>dsCategory.xsd</DependentUpon>
+    </None>
+    <None Include="dsClassRecordData.xsc">
+      <DependentUpon>dsClassRecordData.xsd</DependentUpon>
+    </None>
+    <None Include="dsClassRecordData.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsClassRecordData.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsClassRecordData.xss">
+      <DependentUpon>dsClassRecordData.xsd</DependentUpon>
+    </None>
+    <None Include="dsClassRecordStudents.xsc">
+      <DependentUpon>dsClassRecordStudents.xsd</DependentUpon>
+    </None>
+    <None Include="dsClassRecordStudents.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsClassRecordStudents.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsClassRecordStudents.xss">
+      <DependentUpon>dsClassRecordStudents.xsd</DependentUpon>
+    </None>
+    <None Include="dsDatabases.xsc">
+      <DependentUpon>dsDatabases.xsd</DependentUpon>
+    </None>
+    <None Include="dsDatabases.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDatabases.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsDatabases.xss">
+      <DependentUpon>dsDatabases.xsd</DependentUpon>
+    </None>
+    <None Include="dsExam.xsc">
+      <DependentUpon>dsExam.xsd</DependentUpon>
+    </None>
+    <None Include="dsExam.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExam.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsExam.xss">
+      <DependentUpon>dsExam.xsd</DependentUpon>
+    </None>
+    <None Include="dsExamination.xsc">
+      <DependentUpon>dsExamination.xsd</DependentUpon>
+    </None>
+    <None Include="dsExamination.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExamination.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsExamination.xss">
+      <DependentUpon>dsExamination.xsd</DependentUpon>
+    </None>
+    <None Include="dsExtName.xsc">
+      <DependentUpon>dsExtName.xsd</DependentUpon>
+    </None>
+    <None Include="dsExtName.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExtName.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsExtName.xss">
+      <DependentUpon>dsExtName.xsd</DependentUpon>
+    </None>
+    <None Include="dsItems.xsc">
+      <DependentUpon>dsItems.xsd</DependentUpon>
+    </None>
+    <None Include="dsItems.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsItems.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsItems.xss">
+      <DependentUpon>dsItems.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuestionBank.xsc">
+      <DependentUpon>dsQuestionBank.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuestionBank.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsQuestionBank.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsQuestionBank.xss">
+      <DependentUpon>dsQuestionBank.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuestionnaireItems.xsc">
+      <DependentUpon>dsQuestionnaireItems.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuestionnaireItems.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsQuestionnaireItems.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsQuestionnaireItems.xss">
+      <DependentUpon>dsQuestionnaireItems.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuestionnaires.xsc">
+      <DependentUpon>dsQuestionnaires.xsd</DependentUpon>
+    </None>
+    <None Include="dsQuestionnaires.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsQuestionnaires.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsQuestionnaires.xss">
+      <DependentUpon>dsQuestionnaires.xsd</DependentUpon>
+    </None>
+    <None Include="dsServers.xsc">
+      <DependentUpon>dsServers.xsd</DependentUpon>
+    </None>
+    <None Include="dsServers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsServers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsServers.xss">
+      <DependentUpon>dsServers.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_oRp_icon.ico" />
+    <Content Include="ServerConfig\Connection.txt" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\Up1.png" />
+    <None Include="Resources\Down1.png" />
+    <None Include="Resources\Up.png" />
+    <None Include="Resources\Down.png" />
+    <None Include="Dashboard Designs\Sample Dashboard.xml" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\TeacherDashboard.bmp" />
+    <None Include="Resources\Splash1.png" />
+    <None Include="Resources\Splash.png" />
+    <None Include="Resources\Splash Screen.png" />
+    <None Include="Resources\Help Icon.png" />
+    <None Include="Resources\Questionnaire Icon2.png" />
+    <None Include="Resources\Questionnaire Icon.png" />
+    <None Include="Resources\Examination Icon2.png" />
+    <None Include="Resources\Accounts Icon1.png" />
+    <None Include="Resources\Accounts Icon2.png" />
+    <None Include="Resources\Accounts Icon.png" />
+    <None Include="Resources\About Icon.png" />
+    <None Include="Resources\Examination Icon.png" />
+    <None Include="Resources\Dashboard Icon.png" />
+    <None Include="Resources\exam - navy.png" />
+    <None Include="Resources\exam - gold.png" />
+    <None Include="Resources\exam.png" />
+    <None Include="Resources\dashboard-icon-23685-16x16.ico" />
+    <None Include="Resources\BISU Logo.png" />
+    <None Include="Resources\user icon.png" />
+    <None Include="Resources\password icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
